@@ -19,4 +19,9 @@ class Maker < Sinatra::Base
   get '/' do
     return erb(:index)
   end
+
+  get '/all' do
+
+    return erb(:index)
+  end
 end
