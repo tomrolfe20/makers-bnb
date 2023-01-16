@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T15:43:30+00:00">2023-01-16T15:43:30+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T16:40:16+00:00">2023-01-16T16:40:16+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  33.67%
+  33.33%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.59
+         0.36
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>2</b> files in total.
+    <b>3</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>98</b> relevant lines,
-    <span class="green"><b>33</b> lines covered</span> and
-    <span class="red"><b>65</b> lines missed. </span>
+    <b>114</b> relevant lines,
+    <span class="green"><b>38</b> lines covered</span> and
+    <span class="red"><b>76</b> lines missed. </span>
     (<span class="red">
-  33.67%
+  33.33%
 </span>
 )
   </div>
@@ -72,23 +72,34 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fba9e2d69a20bfebe83461e5716d5994cfd76066" class="src_link" title="app.rb">app.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">71.43 %</td>
+            <td class="red strong cell--number t-file__coverage">75.00 %</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">12</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.71</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0.75</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#24e4ad8f4418f39b4857121052548adaa6205277" class="src_link" title="lib/database_connection.rb">lib/database_connection.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">30.77 %</td>
+            <td class="red strong cell--number t-file__coverage">19.78 %</td>
             <td class="cell--number">126</td>
             <td class="cell--number">91</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">73</td>
+            <td class="cell--number">0.22</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#7387ea50c0dbebea0a07a67615a1707a6f7dfd1b" class="src_link" title="spec/integration/app_spec.rb">spec/integration/app_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">28</td>
-            <td class="cell--number">63</td>
-            <td class="cell--number">0.58</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.09</td>
             
           </tr>
         
@@ -114,7 +125,7 @@
     <h3>app.rb</h3>
     <h4>
       <span class="red">
-  71.43%
+  75.0%
 </span>
 
       lines covered
@@ -123,9 +134,9 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>12</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
 
     
@@ -136,13 +147,13 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">require &#39;sinatra/base&#39;</code>
+            <code class="ruby"># in app.rb</code>
           </li>
         </div>
       
@@ -153,7 +164,7 @@
 
             
 
-            <code class="ruby">require &#39;sinatra/reloader&#39;</code>
+            <code class="ruby">require &quot;sinatra/base&quot;</code>
           </li>
         </div>
       
@@ -164,7 +175,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># an extra gem to require</code>
           </li>
         </div>
       
@@ -175,7 +186,7 @@
 
             
 
-            <code class="ruby">class Maker &lt; Sinatra::Base</code>
+            <code class="ruby">require &quot;sinatra/activerecord&quot;</code>
           </li>
         </div>
       
@@ -186,34 +197,12 @@
 
             
 
-            <code class="ruby">  configure :development do</code>
+            <code class="ruby">require &quot;sinatra/reloader&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">    register Sinatra::Reloader</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -224,24 +213,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"># BCrypt for encrypting the passwords</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  get &#39;/&#39; do</code>
+            <code class="ruby">require &quot;bcrypt&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
             
 
-            <code class="ruby">    return erb(:index)</code>
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Application &lt; Sinatra::Base</code>
           </li>
         </div>
       
@@ -252,12 +263,177 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  configure :development do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    register Sinatra::ActiveRecordExtension</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    register Sinatra::Reloader</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    return erb(:index)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/all&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">    return erb(:index)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -277,7 +453,7 @@
     <h3>lib/database_connection.rb</h3>
     <h4>
       <span class="red">
-  30.77%
+  19.78%
 </span>
 
       lines covered
@@ -287,8 +463,8 @@
 
     <div class="t-line-summary">
       <b>91</b> relevant lines.
-      <span class="green"><b>28</b> lines covered</span> and
-      <span class="red"><b>63</b> lines missed.</span>
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>73</b> lines missed.</span>
     </div>
 
     
@@ -607,8 +783,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
-            
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
             
 
             
@@ -629,8 +805,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
             
 
             
@@ -761,8 +937,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="43">
+            
             
 
             
@@ -772,8 +948,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="44">
+            
             
 
             
@@ -783,8 +959,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="45">
+            
             
 
             
@@ -794,8 +970,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="46">
+            
             
 
             
@@ -805,8 +981,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="47">
+            
             
 
             
@@ -816,8 +992,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="48">
+            
             
 
             
@@ -827,8 +1003,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="49">
+            
             
 
             
@@ -838,8 +1014,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="50">
+            
             
 
             
@@ -1014,8 +1190,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="66">
+            
             
 
             
@@ -1608,8 +1784,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="25" data-linenumber="120">
-            <span class="hits">25</span>
+          <li class="missed" data-hits="0" data-linenumber="120">
+            
             
 
             
@@ -1652,8 +1828,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="124">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="124">
+            <span class="hits">3</span>
             
 
             
@@ -1675,6 +1851,345 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="126">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="7387ea50c0dbebea0a07a67615a1707a6f7dfd1b">
+  <div class="header">
+    <h3>spec/integration/app_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &quot;spec_helper&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &quot;rack/test&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require_relative &#39;../../app&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;json&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">describe Application do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  # This is so we can use rack-test helper methods.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  include Rack::Test::Methods</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  # We need to declare the `app` value by instantiating the Application</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  # class so our tests work.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">  let(:app) { Application.new }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  # Write your integration tests below.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  # If you want to split your integration tests</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  # accross multiple RSpec files (for example, have</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  # one test suite for each set of related features),</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  # you can duplicate this test file to create a new one.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;GET /&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;should get the homepage&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      response = get(&#39;/&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response.status).to eq(200)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 

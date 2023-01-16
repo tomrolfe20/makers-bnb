@@ -7,7 +7,7 @@ require "sinatra/reloader"
 # BCrypt for encrypting the passwords
 require "bcrypt"
 
-class Maker < Sinatra::Base
+class Application < Sinatra::Base
 
   configure :development do
     register Sinatra::ActiveRecordExtension
