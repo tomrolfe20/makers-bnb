@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-  # has_secure_password
-
+  has_many :space
+  has_many :booking
 end
-
-# encrypted_password = BCrypt::Password.create(params["password"])
