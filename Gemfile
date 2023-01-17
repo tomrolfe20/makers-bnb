@@ -24,4 +24,7 @@ group :test do
   gem 'simplecov', require: false # test coverage
   gem 'simplecov-console', require: false # graphical test coverage
   gem "capybara" # feature tests
+  gem "faker", "~> 3.1"
 end
+
+
