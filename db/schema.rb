@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_17_112640) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_134012) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_112640) do
     t.date "date"
     t.integer "space_id"
     t.boolean "available"
+  end
+
+  create_table "spaces", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.integer "price_per_night"
+    t.integer "user_id"
+    t.text "host_name"
   end
 
   create_table "users", force: :cascade do |t|
