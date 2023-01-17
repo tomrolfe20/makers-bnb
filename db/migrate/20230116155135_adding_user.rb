@@ -26,5 +26,4 @@ end
 
 # User.create(
 #   first_name: "orhan",
-
 # )

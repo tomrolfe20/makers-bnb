@@ -14,7 +14,7 @@
  require "capybara/rspec"
 
  # tells Capybara what the app is for the feature tests
- Capybara.app = Application
+Capybara.app = Application
 
 require 'database_connection'
 
@@ -41,7 +41,7 @@ RSpec.configure do |config|
   # assertions if you prefer.
 
   config.before(:each) do
-    ActiveRecord::Base.subclasses.each(&:delete_all)
+    # ActiveRecord::Base.subclasses.each(&:delete_all)
   end
 
   config.expect_with :rspec do |expectations|
