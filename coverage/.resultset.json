@@ -8,6 +8,7 @@
           null,
           1,
           1,
+          1,
           null,
           null,
           1,
@@ -19,15 +20,24 @@
           0,
           null,
           null,
-          null,
-          null,
           1,
           1,
-          null,
-          null,
           1,
           null,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/user.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -168,6 +178,7 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           null,
@@ -187,14 +198,14 @@
           1,
           1,
           1,
-          null,
-          1,
+          0,
+          0,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673887216
+    "timestamp": 1673950418
   }
 }

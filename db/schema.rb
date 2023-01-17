@@ -23,3 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_155135) do
   end
 
 end
+
+
+#  dont manually edit the schema

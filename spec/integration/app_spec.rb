@@ -2,6 +2,7 @@ require "spec_helper"
 require "rack/test"
 require_relative '../../app'
 require 'json'
+require_relative '../../lib/user'
 
 describe Application do
   # This is so we can use rack-test helper methods.
@@ -21,8 +22,8 @@ describe Application do
   context 'GET /' do
     it 'should get the homepage' do
       response = get('/')
-
       expect(response.status).to eq(200)
+      expect(response.body).to include('tom')
     end
   end
 end
