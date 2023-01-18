@@ -1,17 +1,53 @@
-require 'faker'
-
-Faker::Config.random = Random.new(10)
-
 if ENV['RACK_ENV'] == 'test'
-  10.times do
-    fake_data = Faker::Internet.unique.user('username', 'email', 'password')
-    User.create(
-      user_name: fake_data[:username],
-      email: fake_data[:email],
-      password: fake_data[:password]
-    )
-  end
-
+  User.create(
+    user_name: "name",
+    email: "name@example.email",
+    password_digest: "pass123"
+  )
+  User.create(
+    user_name: "name2",
+    email: "name2@example.email",
+    password_digest: "pass123"
+  )
+  User.create(
+    user_name: "name3",
+    email: "name3@example.email",
+    password_digest: "pass123"
+  )
+  Space.create(
+    name: "Hotel Makers",
+    description: "Ikea",
+    price_per_night: 200,
+    user_id: 1
+  )
+  Space.create(
+    name: "Hotel Hilton",
+    description: "Fancy",
+    price_per_night: 1000,
+    user_id: 2
+  )
+  Space.create(
+    name: "Holiday inn",
+    description: "just a bed",
+    price_per_night: 100,
+    user_id: 3
+  )
+  Booking.create(
+    date: "2023-01-01",
+    available: false,
+    space_id: 1,
+    user_id: 1
+  )
+  Booking.create(
+    date: "2023-01-01",
+    available: true,
+    space_id: 2,
+    user_id: 2
+  )
+  Booking.create(
+    date: "2023-01-01",
+    available: false,
+    space_id: 3,
+    user_id: 3
+  )
 end
-
-

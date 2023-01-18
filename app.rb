@@ -4,6 +4,8 @@ require "sinatra/base"
 require "sinatra/activerecord"
 require "sinatra/reloader"
 require_relative "./lib/user"
+require_relative "./lib/space"
+require_relative "./lib/booking"
 
 # BCrypt for encrypting the passwords
 require "bcrypt"
