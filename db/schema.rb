@@ -10,30 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_17_134012) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_18_152542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.date "date"
-    t.integer "space_id"
     t.boolean "available"
+    t.bigint "user_id"
+    t.bigint "space_id"
+    t.index ["space_id"], name: "index_bookings_on_space_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "spaces", force: :cascade do |t|
     t.text "name"
     t.text "description"
     t.integer "price_per_night"
-    t.integer "user_id"
-    t.text "host_name"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.text "user_name"
     t.text "email"
     t.text "password"
+    t.text "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "spaces"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "spaces", "users"
 end
