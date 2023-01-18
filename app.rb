@@ -11,7 +11,7 @@ require_relative "./lib/booking"
 require "bcrypt"
 
 class Application < Sinatra::Base
-
+  enable :sessions
   configure :development do
     register Sinatra::ActiveRecordExtension
     register Sinatra::Reloader
@@ -39,10 +39,25 @@ class Application < Sinatra::Base
     return erb(:signup)
   end
 
+  get '/login' do 
+    return erb(:login)
+  end
+  
   post '/signup' do
     return erb(:signup_error) if username_exists(params[:user_name]) || email_exists(params[:email])
     User.create(user_name: params[:user_name], email: params[:email], password: params[:password])
     erb(:user_added)
   end
 
+  post '/login' do
+    username = params[:user_name]
+    password = params[:password]
+    user = User.find_by(user_name: username)
+      if user.password == password 
+        session[:user_id] = user.id
+        return erb(:loggedin)
+      else 
+        return erb(:login_error)
+      end 
+    end 
 end

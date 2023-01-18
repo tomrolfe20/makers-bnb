@@ -26,6 +26,28 @@ describe Application do
       expect(@response.body).to include('Hello')
     end
   end
+  context 'GET /login' do
+    it 'should return a log in form' do
+      @response = get('/login')
+      expect(@response.body).to include('<input type="text" name="user_name" placeholder="username">')
+      expect(@response.body).to include('<input type="password" name="password" placeholder="password">')
+      #if using speech marks within the inlcude then you need singlar mark on the outside - see above.
+    end
+  end 
+
+  context 'POST /login' do
+    it 'should log the user in' do
+      @response = post('/login', user_name: 'name', password: 'pass123')
+      expect(@response.body).to include("You have logged in")
+    end 
+  end 
+  context 'POST /login with wrong password' do
+    it 'should give us an error' do
+      @response = post('/login', user_name: 'name', password: 'notpass123')
+      expect(@response.body).to include("You have entered the wrong details")
+    end
+  end
+
 
   context 'POST /signup' do
     it 'should create a new user' do
@@ -33,6 +55,7 @@ describe Application do
       @response = post('/signup', user_name: 'hello', email: 'hello@example.email', password: 'hello')
       expect(User.last.user_name).to include('hello')
       expect(length + 1).to eq(User.all.length)
+      User.last.destroy
     end
   end
   context 'POST /signup with same email' do
