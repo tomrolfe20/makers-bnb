@@ -18,12 +18,28 @@ describe Application do
   # one test suite for each set of related features),
   # you can duplicate this test file to create a new one.
 
+  after(:each) { expect(@response.status).to eq 200 }
 
   context 'GET /' do
     it 'should get the homepage' do
-      response = get('/')
-      expect(response.status).to eq(200)
-      expect(response.body).to include('tom')
+      @response = get('/')
+      expect(@response.body).to include('Hello')
+    end
+  end
+
+  context 'POST /signup' do
+    it 'should create a new user' do
+      @response = post('/signup', user_name: 'name31', email: 'name31@example.email', password_digest: 'pass1234')
+      expect(User.last.user_name).to include('name31')
+    end
+  end
+
+  context 'POST /signup' do
+    it 'should fail if duplicate' do
+      @response = post('/signup', user_name: 'name31', email: 'name31@example.email', password_digest: 'pass1234')
+
+      expect(User.all)
+
     end
   end
 end

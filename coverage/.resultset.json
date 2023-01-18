@@ -1,11 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/app.rb": {
+      "/Users/james/Desktop/makers-bnb/app.rb": {
         "lines": [
           null,
           1,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -25,24 +27,53 @@
           1,
           null,
           null,
+          1,
+          null,
+          0,
           null,
           null,
+          1,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/user.rb": {
-        "lines": [
           1,
           null,
           null,
           null,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/database_connection.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/james/Desktop/makers-bnb/lib/space.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/james/Desktop/makers-bnb/lib/booking.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/james/Desktop/makers-bnb/lib/database_connection.rb": {
         "lines": [
           null,
           null,
@@ -172,7 +203,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/spec/integration/app_spec.rb": {
+      "/Users/james/Desktop/makers-bnb/spec/integration/app_spec.rb": {
         "lines": [
           1,
           1,
@@ -186,12 +217,20 @@
           null,
           null,
           null,
-          2,
+          3,
           null,
           null,
           null,
           null,
           null,
+          null,
+          null,
+          3,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -199,13 +238,15 @@
           1,
           1,
           1,
-          1,
+          null,
+          null,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673951853
+    "timestamp": 1674041217
   }
 }
