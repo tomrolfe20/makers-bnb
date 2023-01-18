@@ -2,7 +2,7 @@ class AddingUser< ActiveRecord::Migration[7.0]
   def change
       create_table :users do |t|
         t.text :email
-        t.text :password_digest
+        t.text :password
         t.text :user_name
         t.timestamps
     end
@@ -17,7 +17,7 @@ class AddingUser< ActiveRecord::Migration[7.0]
         b.boolean :available
         b.belongs_to :user, foreign_key: true
         b.belongs_to :space, foreign_key: true
-      end 
+      end
   end
 end
 

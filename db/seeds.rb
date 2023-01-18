@@ -2,17 +2,17 @@ if ENV['RACK_ENV'] == 'test'
   User.create(
     user_name: "name",
     email: "name@example.email",
-    password_digest: "pass123"
+    password: "pass123"
   )
   User.create(
     user_name: "name2",
     email: "name2@example.email",
-    password_digest: "pass123"
+    password: "pass123"
   )
   User.create(
     user_name: "name3",
     email: "name3@example.email",
-    password_digest: "pass123"
+    password: "pass123"
   )
   Space.create(
     name: "Hotel Makers",
@@ -49,5 +49,11 @@ if ENV['RACK_ENV'] == 'test'
     available: false,
     space_id: 3,
     user_id: 3
+  )
+else
+  User.create(
+    user_name: "name",
+    email: "name@example.email",
+    password: "pass123"
   )
 end

@@ -9,6 +9,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
           1,
@@ -20,13 +22,32 @@
           0,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
           null,
           null,
+          1,
+          0,
           null,
           null,
+          1,
+          2,
+          1,
+          1,
           null,
           null,
           null
@@ -35,8 +56,26 @@
       "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/user.rb": {
         "lines": [
           1,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/space.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/booking.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -186,12 +225,20 @@
           null,
           null,
           null,
-          2,
+          4,
           null,
           null,
           null,
           null,
           null,
+          null,
+          null,
+          4,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -200,12 +247,22 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673951853
+    "timestamp": 1674054137
   }
 }
