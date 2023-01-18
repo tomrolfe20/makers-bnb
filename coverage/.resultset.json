@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/app.rb": {
+      "/Users/james/Desktop/makers-bnb/app.rb": {
         "lines": [
           null,
           1,
@@ -65,10 +65,15 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/user.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -78,7 +83,7 @@
           null
         ]
       },
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/space.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/space.rb": {
         "lines": [
           1,
           1,
@@ -86,7 +91,7 @@
           null
         ]
       },
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/booking.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/booking.rb": {
         "lines": [
           1,
           1,
@@ -96,7 +101,7 @@
           null
         ]
       },
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/database_connection.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/database_connection.rb": {
         "lines": [
           null,
           null,
@@ -226,7 +231,7 @@
           null
         ]
       },
-      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/spec/integration/app_spec.rb": {
+      "/Users/james/Desktop/makers-bnb/spec/integration/app_spec.rb": {
         "lines": [
           1,
           1,
@@ -240,7 +245,7 @@
           null,
           null,
           null,
-          7,
+          8,
           null,
           null,
           null,
@@ -248,21 +253,7 @@
           null,
           null,
           null,
-          7,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
+          8,
           null,
           1,
           1,
@@ -274,6 +265,10 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -289,6 +284,26 @@
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           1,
           1,
@@ -300,6 +315,6 @@
         ]
       }
     },
-    "timestamp": 1674059574
+    "timestamp": 1674060867
   }
 }

@@ -35,18 +35,7 @@ describe Application do
     end
   end 
 
-  context 'POST /login' do
-    it 'should log the user in' do
-      @response = post('/login', user_name: 'name', password: 'pass123')
-      expect(@response.body).to include("You have logged in")
-    end 
-  end 
-  context 'POST /login with wrong password' do
-    it 'should give us an error' do
-      @response = post('/login', user_name: 'name', password: 'notpass123')
-      expect(@response.body).to include("You have entered the wrong details")
-    end
-  end
+ 
 
 
   context 'POST /signup' do
@@ -67,4 +56,24 @@ describe Application do
     end
   end
 
+  context 'POST /login' do
+    it 'should log the user in' do
+      @response = post('/login', user_name: 'name', password: 'pass123')
+      expect(@response.body).to include("You have logged in")
+    end 
+  end 
+  context 'POST /login with wrong password' do
+    it 'should give us an error' do
+      @response = post('/login', user_name: 'name', password: 'notpass123')
+      expect(@response.body).to include("You have entered the wrong details")
+    end
+  end
+
+  context 'POST /logout' do
+    it 'should log you out of the session' do
+      @response = post('/logout')
+      expect(@response.body).to include("You have logged out")
+      
+    end
+  end
 end

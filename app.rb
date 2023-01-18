@@ -60,4 +60,9 @@ class Application < Sinatra::Base
         return erb(:login_error)
       end 
     end 
+  
+  post '/logout' do
+    session.clear
+    return erb(:logout)
+  end
 end
