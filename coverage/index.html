@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-18T11:26:57+00:00">2023-01-18T11:26:57+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-18T12:08:03+00:00">2023-01-18T12:08:03+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  44.53%
+  47.62%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.49
+         0.6
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>137</b> relevant lines,
-    <span class="green"><b>61</b> lines covered</span> and
-    <span class="red"><b>76</b> lines missed. </span>
+    <b>147</b> relevant lines,
+    <span class="green"><b>70</b> lines covered</span> and
+    <span class="red"><b>77</b> lines missed. </span>
     (<span class="red">
-  44.53%
+  47.62%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#694e6d9c0c34bf1668827b53401b6ddabcfafbf9" class="src_link" title="app.rb">app.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">85.00 %</td>
-            <td class="cell--number">42</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">0.85</td>
+            <td class="yellow strong cell--number t-file__coverage">82.61 %</td>
+            <td class="cell--number">50</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1.26</td>
             
           </tr>
         
@@ -117,9 +117,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8920f66dc0174a353eed66d1223909148af15238" class="src_link" title="lib/user.rb">lib/user.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -128,11 +128,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d16ff0904296c5e490136d812339c2ad0620efb4" class="src_link" title="spec/integration/app_spec.rb">spec/integration/app_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">39</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">17</td>
+            <td class="cell--number">48</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">22</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.24</td>
+            <td class="cell--number">1.27</td>
             
           </tr>
         
@@ -158,7 +158,7 @@
     <h3>app.rb</h3>
     <h4>
       <span class="yellow">
-  85.0%
+  82.61%
 </span>
 
       lines covered
@@ -167,9 +167,9 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>23</b> relevant lines.
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby"># in app.rb</code>
+            <code class="ruby">  # in app.rb</code>
           </li>
         </div>
       
@@ -521,13 +521,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">    User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])</code>
+            <code class="ruby">    # User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])</code>
           </li>
         </div>
       
@@ -565,13 +565,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="36">
+            <span class="hits">3</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    @user = User.all</code>
           </li>
         </div>
       
@@ -582,40 +582,40 @@
 
             
 
-            <code class="ruby">    # @users.create(user)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="38">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    @user = User.all</code>
+            <code class="ruby">    @user.each do |record|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="39">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    return erb(:user_added)</code>
+            <code class="ruby">    if record.user_name.include?(params[:user_name]) || record.email.include?(params[:email])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="missed" data-hits="0" data-linenumber="40">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      return erb(:signup_error)</code>
           </li>
         </div>
       
@@ -626,12 +626,100 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="43">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby">    # @users.create(user)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="46">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    return erb(:user_added)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -2249,8 +2337,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2295,7 +2383,29 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_uniqueness_of :user_name</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_uniqueness_of :email</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -2324,8 +2434,8 @@
     
 
     <div class="t-line-summary">
-      <b>17</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>22</b> relevant lines.
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2469,8 +2579,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="13">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="13">
+            <span class="hits">4</span>
             
 
             
@@ -2557,8 +2667,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="21">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="21">
+            <span class="hits">4</span>
             
 
             
@@ -2684,7 +2794,7 @@
 
             
 
-            <code class="ruby">      @response = post(&#39;/signup&#39;, user_name: &#39;name31&#39;, email: &#39;name31@example.email&#39;, password_digest: &#39;pass1234&#39;)</code>
+            <code class="ruby">      @response = post(&#39;/signup&#39;, user_name: &#39;name99&#39;, email: &#39;name99@example.email&#39;, password_digest: &#39;pass1234&#39;)</code>
           </li>
         </div>
       
@@ -2695,7 +2805,7 @@
 
             
 
-            <code class="ruby">      expect(User.last.user_name).to include(&#39;name31&#39;)</code>
+            <code class="ruby">      expect(User.last.user_name).to include(&#39;name99&#39;)</code>
           </li>
         </div>
       
@@ -2706,7 +2816,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2717,7 +2827,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2728,12 +2838,111 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;POST /signup&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;should fail if duplicate email&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post(&#39;/signup&#39;, user_name: &#39;name31&#39;, email: &#39;name33@example.email&#39;, password_digest: &#39;pass1234&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @response = post(&#39;/signup&#39;, user_name: &#39;name31&#39;, email: &#39;name33@example.email&#39;, password_digest: &#39;pass1234&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(@response.body).to include(&quot;This Username or email is already in use&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -2744,7 +2953,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -2755,7 +2964,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 

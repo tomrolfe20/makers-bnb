@@ -1,4 +1,4 @@
-# in app.rb
+  # in app.rb
 require "sinatra/base"
 # an extra gem to require
 require "sinatra/activerecord"
@@ -29,7 +29,7 @@ class Application < Sinatra::Base
 
   post '/signup' do
     # User.create(user_name: "name31", email: "name31@example.email", password_digest: "pass1234")
-    User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])
+    # User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])
     # @user.user_name = params[:user_name]
     # @user.email = params [:email]
     # @user.password_digest = params[:password_digest]
@@ -38,13 +38,12 @@ class Application < Sinatra::Base
     @user.each do |record|
     if record.user_name.include?(params[:user_name]) || record.email.include?(params[:email])
       return erb(:signup_error)
-    else 
+    end
 
-
+    User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])
     # @users.create(user)
     
     return erb(:user_added)
-    end
     end
   end
 
