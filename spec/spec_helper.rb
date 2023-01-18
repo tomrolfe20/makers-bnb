@@ -5,7 +5,7 @@
  SimpleCov.start
 
  # very important line to say that tests are run in "test" environment
- ENV["RACK_ENV"] = "test"
+ENV["RACK_ENV"] = "test"
  # imports the actual controller file
  require_relative "../app"
 

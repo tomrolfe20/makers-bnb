@@ -29,20 +29,19 @@ describe Application do
 
   context 'POST /signup' do
     it 'should create a new user' do
-      @response = post('/signup', user_name: 'name99', email: 'name99@example.email', password_digest: 'pass1234')
-      expect(User.last.user_name).to include('name99')
+      length = User.all.length
+      @response = post('/signup', user_name: 'hello', email: 'hello@example.email', password: 'hello')
+      expect(User.last.user_name).to include('hello')
+      expect(length + 1).to eq(User.all.length)
+    end
+  end
+  context 'POST /signup with same email' do
+    it 'should fail and return error' do
+      length = User.all.length
+      @response = post('/signup', user_name: 'name', email: 'name@example.email', password: 'pass123')
+      expect(@response.body).to include('This Username or email is already in use')
+      expect(length).to eq(User.all.length)
     end
   end
 
-  context 'POST /signup' do
-    it 'should fail if duplicate email' do
-      post('/signup', user_name: 'name31', email: 'name33@example.email', password_digest: 'pass1234')
-      @response = post('/signup', user_name: 'name31', email: 'name33@example.email', password_digest: 'pass1234')
-      
-
-
-      expect(@response.body).to include("This Username or email is already in use")
-
-    end
-  end
 end

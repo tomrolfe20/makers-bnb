@@ -17,34 +17,32 @@ class Application < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  # def invalid_input
+  #   # status 400
+  #   erb(:signup_error)
+  # end
+
+  def username_exists(username)
+    User.find_by(user_name: username)
+  end
+
+  def email_exists(email)
+    User.find_by(email: email)
+  end
+
   get '/' do
     @user = User.all
     return erb(:index)
   end
 
   get '/signup' do
-   
     return erb(:signup)
   end
 
   post '/signup' do
-    # User.create(user_name: "name31", email: "name31@example.email", password_digest: "pass1234")
-    # User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])
-    # @user.user_name = params[:user_name]
-    # @user.email = params [:email]
-    # @user.password_digest = params[:password_digest]
-    @user = User.all
-
-    @user.each do |record|
-    if record.user_name.include?(params[:user_name]) || record.email.include?(params[:email])
-      return erb(:signup_error)
-    end
-
-    User.create(user_name: params[:user_name], email: params[:email], password_digest: params[:password_digest])
-    # @users.create(user)
-    
-    return erb(:user_added)
-    end
+    return erb(:signup_error) if username_exists(params[:user_name]) || email_exists(params[:email])
+    User.create(user_name: params[:user_name], email: params[:email], password: params[:password])
+    erb(:user_added)
   end
 
 end
