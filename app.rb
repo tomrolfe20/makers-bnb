@@ -16,11 +16,14 @@ class Application < Sinatra::Base
     register Sinatra::ActiveRecordExtension
     register Sinatra::Reloader
   end
+  get '/search' do
+    return erb(:search)
+  end 
 
-  # def invalid_input
-  #   # status 400
-  #   erb(:signup_error)
-  # end
+  post '/search' do
+    @space = Space.where("spaces.date_from >= ? AND spaces.date_to <= ?", params[:date_from], params[:date_to])
+    return erb(:viewspaces)
+  end 
 
   def username_exists(username)
     User.find_by(user_name: username)
@@ -29,10 +32,12 @@ class Application < Sinatra::Base
   def email_exists(email)
     User.find_by(email: email)
   end
-    get '/' do
+  
+  get '/' do
     @user = User.all
     return erb(:index)
   end
+  
   get '/signup' do
     return erb(:signup)
   end

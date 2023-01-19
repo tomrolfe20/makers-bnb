@@ -93,4 +93,10 @@ describe Application do
       expect(@response.body).to include("Space created")
     end 
   end
+  context 'POST /search' do 
+    it 'should search based upon dates' do
+      @response = post('/search', date_from: '2022-01-01', date_to: '2022-01-03')
+      expect(@response.body).to include("Hotel Makers")
+    end
+  end
 end
