@@ -34,15 +34,20 @@ class Application < Sinatra::Base
     @user = User.all
     return erb(:index)
   end
-
   get '/signup' do
     return erb(:signup)
   end
-
   get '/login' do 
     return erb(:login)
   end
-  
+  get '/spaces' do
+    return erb(:listspace)
+  end
+  post '/spaces' do
+    Space.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], user_id: session[:user_id])
+    return erb(:createdspace)
+  end 
+
   post '/signup' do
     return erb(:signup_error) if username_exists(params[:user_name]) || email_exists(params[:email])
     User.create(user_name: params[:user_name], email: params[:email], password: params[:password])

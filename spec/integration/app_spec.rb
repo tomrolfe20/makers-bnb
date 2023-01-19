@@ -34,10 +34,14 @@ describe Application do
       #if using speech marks within the inlcude then you need singlar mark on the outside - see above.
     end
   end 
-
- 
-
-
+  context 'GET /spaces' do 
+    it 'should return a list space form' do 
+      @response = get('/spaces')
+      expect(@response.body).to include('<input type="text" name="name" placeholder="space name">')
+      expect(@response.body).to include('<input type="text" name="description" placeholder="description">')
+      expect(@response.body).to include('<input type="text" name="price_per_night" placeholder="PPN">')
+    end
+  end 
   context 'POST /signup' do
     it 'should create a new user' do
       length = User.all.length
@@ -73,7 +77,12 @@ describe Application do
     it 'should log you out of the session' do
       @response = post('/logout')
       expect(@response.body).to include("You have logged out")
-      
     end
+  end
+  context 'POST /spaces' do 
+    it 'should create a new space for a user' do
+      @response = post('/spaces', name: "Hotel well", description: "It's alright", price_per_night: 200, user_id: 1)
+      expect(@response.body).to include("Space created")
+    end 
   end
 end
