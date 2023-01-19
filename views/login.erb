@@ -1,13 +1,38 @@
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
 <body>
-Login Page
-<h1>
-<form action="/login" method="post">
+<div class="nav-bar">
+         <a class="logo-link" href="/"><div class="left-nav">Maker BnB</div></a>
+        <div class="right-nav">
+           <a href="/login"><button type="button" class="button-4">Log in</button></a>
+           <a href="/"><button type="button" class="button-4">Sign up</button></a>
+         </div>
+    </div>
+
+<%# <form action="/login" method="post">
      <input type="text" name="user_name" placeholder="username">
      <input type="password" name="password" placeholder="password">
-     <input type="submit" value="Log in">
-    </form>
-</h1>
+     <input class="btn btn-success" type="submit" value="Log in">
+    </form> %>
+    <div class="index-hero">Feel at home, anywhere</div>
+    <div class="spaces-container">
+        <form class="form-short" action="/login" method="post">
+            <div class="subtitle">Log in to your account</div>
+            <div class="input-container ic1">
+                <input type="text" name="user_name" placeholder="username">
+
+            </div>
+            <div class="input-container ic2">
+                <input type="password" name="password" placeholder="password">
+                <div class="cut"></div>
+            </div>
+            <button type="text" class="button-4">Signup</button>
+        </form>
+    </div>
 </body>
 </html>
