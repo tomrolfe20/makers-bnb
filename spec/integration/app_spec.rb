@@ -40,6 +40,14 @@ describe Application do
       expect(@response.body).to include('<input type="text" name="name" placeholder="space name">')
       expect(@response.body).to include('<input type="text" name="description" placeholder="description">')
       expect(@response.body).to include('<input type="text" name="price_per_night" placeholder="PPN">')
+      expect(@response.body).to include('<input type="text" name="date_from" placeholder="2023-01-01">')
+      expect(@response.body).to include('<input type="text" name="date_to" placeholder="2023-01-04">')
+    end
+  end 
+  context 'GET /viewspaces' do
+    it 'should return a list of spaces' do 
+      @response = get('/viewspaces')
+      expect(@response.body).to include("Hotel Makers")
     end
   end 
   context 'POST /signup' do
@@ -81,7 +89,7 @@ describe Application do
   end
   context 'POST /spaces' do 
     it 'should create a new space for a user' do
-      @response = post('/spaces', name: "Hotel well", description: "It's alright", price_per_night: 200, user_id: 1)
+      @response = post('/spaces', name: "Hotel well", description: "It's alright", price_per_night: 200, date_from: "2022-01-01", date_to: "2022-01-04", user_id: 1)
       expect(@response.body).to include("Space created")
     end 
   end
