@@ -29,8 +29,7 @@ class Application < Sinatra::Base
   def email_exists(email)
     User.find_by(email: email)
   end
-
-  get '/' do
+    get '/' do
     @user = User.all
     return erb(:index)
   end
