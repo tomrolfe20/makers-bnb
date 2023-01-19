@@ -48,14 +48,17 @@ class Application < Sinatra::Base
   post '/login' do
     username = params[:user_name]
     password = params[:password]
-    user = User.find_by(user_name: username)
+    if user = User.find_by(user_name: username)
       if user.password == password
         session[:user_id] = user.id
         return erb(:loggedin)
       else
         return erb(:login_error)
       end
+    else
+      return erb(:login_error)
     end
+  end
 
   post '/logout' do
     session.clear
