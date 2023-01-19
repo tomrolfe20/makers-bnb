@@ -47,6 +47,13 @@ class Application < Sinatra::Base
     @space = Space.all
     return erb(:viewspaces)
   end
+
+  get '/viewspaces/:id' do 
+    @space = Space.find(params[:id])
+
+    return erb(:viewspace)
+  end
+
   post '/spaces' do
     Space.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], date_from: params[:date_from], date_to: params[:date_to], user_id: session[:user_id])
     return erb(:createdspace)

@@ -3,10 +3,10 @@
 <body>
 <h1>Spaces</h1>
 <% @space.each do |space| %>
-    <p><%= space.name %>
-        <%= space.description %>
-        <%= space.date_from %>
-        <%= space.date_to %></p>
+    <p><%= space.name %></p>
+    <p><%= space.description %></p>
+    <p><%= space.date_from %></p>
+    <p> <%= space.date_to %></p>
 <% end %>
 </body>
 </html>
