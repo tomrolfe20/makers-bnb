@@ -49,7 +49,8 @@ class Application < Sinatra::Base
   end
 
   get '/viewspaces/:id' do 
-    @space = Space.find(params[:id])
+    repo = Space.all
+    @space = repo.find(params[:id])
 
     return erb(:viewspace)
   end
