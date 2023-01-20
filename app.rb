@@ -16,11 +16,14 @@ class Application < Sinatra::Base
     register Sinatra::ActiveRecordExtension
     register Sinatra::Reloader
   end
+  get '/search' do
+    return erb(:search)
+  end 
 
-  # def invalid_input
-  #   # status 400
-  #   erb(:signup_error)
-  # end
+  post '/search' do
+    @space = Space.where("spaces.date_from >= ? AND spaces.date_to <= ?", params[:date_from], params[:date_to])
+    return erb(:viewspaces)
+  end 
 
   def username_exists(username)
     User.find_by(user_name: username)
@@ -29,20 +32,38 @@ class Application < Sinatra::Base
   def email_exists(email)
     User.find_by(email: email)
   end
-
+  
   get '/' do
     @user = User.all
     return erb(:index)
   end
-
+  
   get '/signup' do
     return erb(:signup)
   end
-
   get '/login' do 
     return erb(:login)
   end
-  
+  get '/spaces' do
+    return erb(:listspace)
+  end
+  get '/viewspaces' do 
+    @space = Space.all
+    return erb(:viewspaces)
+  end
+
+  get '/viewspaces/:id' do 
+    repo = Space.all
+    @space = repo.find(params[:id])
+
+    return erb(:viewspace)
+  end
+
+  post '/spaces' do
+    Space.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], date_from: params[:date_from], date_to: params[:date_to], user_id: session[:user_id])
+    return erb(:createdspace)
+  end 
+
   post '/signup' do
     return erb(:signup_error) if username_exists(params[:user_name]) || email_exists(params[:email])
     User.create(user_name: params[:user_name], email: params[:email], password: params[:password])

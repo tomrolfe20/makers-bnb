@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/james/Desktop/makers-bnb/app.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/app.rb": {
         "lines": [
           null,
           1,
@@ -21,31 +21,45 @@
           0,
           0,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
           1,
           0,
           null,
           null,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -73,7 +87,7 @@
           null
         ]
       },
-      "/Users/james/Desktop/makers-bnb/lib/user.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -83,7 +97,7 @@
           null
         ]
       },
-      "/Users/james/Desktop/makers-bnb/lib/space.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/space.rb": {
         "lines": [
           1,
           1,
@@ -91,7 +105,7 @@
           null
         ]
       },
-      "/Users/james/Desktop/makers-bnb/lib/booking.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/booking.rb": {
         "lines": [
           1,
           1,
@@ -101,7 +115,7 @@
           null
         ]
       },
-      "/Users/james/Desktop/makers-bnb/lib/database_connection.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/lib/database_connection.rb": {
         "lines": [
           null,
           null,
@@ -231,7 +245,7 @@
           null
         ]
       },
-      "/Users/james/Desktop/makers-bnb/spec/integration/app_spec.rb": {
+      "/Users/shaunflood/Downloads/Makers Work/makers-bnb/spec/integration/app_spec.rb": {
         "lines": [
           1,
           1,
@@ -245,7 +259,7 @@
           null,
           null,
           null,
-          8,
+          12,
           null,
           null,
           null,
@@ -253,26 +267,23 @@
           null,
           null,
           null,
-          8,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
+          12,
           null,
           1,
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
+          1,
           1,
           1,
           1,
@@ -286,6 +297,21 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           null,
@@ -309,12 +335,23 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1674060867
+    "timestamp": 1674149594
   }
 }

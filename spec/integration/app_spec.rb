@@ -34,10 +34,22 @@ describe Application do
       #if using speech marks within the inlcude then you need singlar mark on the outside - see above.
     end
   end 
-
- 
-
-
+  context 'GET /spaces' do 
+    it 'should return a list space form' do 
+      @response = get('/spaces')
+      expect(@response.body).to include('<input type="text" name="name" placeholder="space name">')
+      expect(@response.body).to include('<input type="text" name="description" placeholder="description">')
+      expect(@response.body).to include('<input type="text" name="price_per_night" placeholder="PPN">')
+      expect(@response.body).to include('<input type="text" name="date_from" placeholder="2023-01-01">')
+      expect(@response.body).to include('<input type="text" name="date_to" placeholder="2023-01-04">')
+    end
+  end 
+  context 'GET /viewspaces' do
+    it 'should return a list of spaces' do 
+      @response = get('/viewspaces')
+      expect(@response.body).to include("Hotel Makers")
+    end
+  end 
   context 'POST /signup' do
     it 'should create a new user' do
       length = User.all.length
@@ -73,7 +85,18 @@ describe Application do
     it 'should log you out of the session' do
       @response = post('/logout')
       expect(@response.body).to include("You have logged out")
-      
+    end
+  end
+  context 'POST /spaces' do 
+    it 'should create a new space for a user' do
+      @response = post('/spaces', name: "Hotel well", description: "It's alright", price_per_night: 200, date_from: "2022-01-01", date_to: "2022-01-04", user_id: 1)
+      expect(@response.body).to include("Space created")
+    end 
+  end
+  context 'POST /search' do 
+    it 'should search based upon dates' do
+      @response = post('/search', date_from: '2022-01-01', date_to: '2022-01-03')
+      expect(@response.body).to include("Hotel Makers")
     end
   end
 end

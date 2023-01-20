@@ -18,18 +18,24 @@ if ENV['RACK_ENV'] == 'test'
     name: "Hotel Makers",
     description: "Ikea",
     price_per_night: 200,
+    date_from: "2022-01-01",
+    date_to: "2022-01-03",
     user_id: 1
   )
   Space.create(
     name: "Hotel Hilton",
     description: "Fancy",
     price_per_night: 1000,
+    date_from: "2022-01-01",
+    date_to: "2022-01-03",
     user_id: 2
   )
   Space.create(
     name: "Holiday inn",
     description: "just a bed",
     price_per_night: 100,
+    date_from: "2022-02-10",
+    date_to: "2022-01-14",
     user_id: 3
   )
   Booking.create(
