@@ -15,16 +15,42 @@
          </div>
 
 </div>
-
-<div class="index-hero">Feel at home, anywhere</div>
 <div class="spaces-container">
 
-<% @space.each do |space| %>
+<div class="index-hero">List your space in seconds!</div>
+
+<form class="form-long" action="/spaces" method="post">
+            <div class="subtitle">Let's list your space!</div>
+            <div class="input-container ic1">
+                <input type="text" name="name" placeholder="space name">
+                <div class="cut"></div>
+            </div>
+            <div class="input-container ic2">
+                <input type="text" name="description" placeholder="description">
+                <div class="cut"></div>
+            </div>
+            <div class="input-container ic2">
+                <input type="text" name="price_per_night" placeholder="Price per night">
+                <div class="cut"></div>
+            </div>
+            <div class="input-container ic2">
+                  <input type="text" name="date_from" placeholder="2023-01-01">
+                <div class="cut"></div>
+            </div>
+            <div class="input-container ic2">
+                <input type="text" name="date_to" placeholder="2023-01-04">
+                <div class="cut"></div>
+            </div>
+            <button type="text" class="button-4">List it!</button>
+        </form>
+
+
+<% @space.reverse_each do |space| %>
     <div class="space"><a href="/viewspace/<%=space.id%>"><p><%= space.name %></p></a>
     <p><%= space.description %></p>
     <p><%= space.date_from %></p>
     <p> <%= space.date_to %></p></div>
-<% end %> 
+<% end %>
 </div>
 </body>
 </html>

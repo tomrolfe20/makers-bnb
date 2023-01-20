@@ -15,14 +15,20 @@
          </div>
 
 </div>
-
+<div class="spaces-container">
 <div class="index-hero">Search Page</div>
-<h1>
-<form action="/search" method="post">
-     <input type="text" name="date_from" placeholder="Date from">
-     <input type="text" name="date_to" placeholder="Date to">
-     <input type="submit" value="Search">
-    </form>
-</h1>
+ <form class="form-short" action="/search" method="post">
+            <div class="subtitle">Search from-to</div>
+            <div class="input-container ic1">
+                <input type="text" name="date_from" placeholder="Date from">
+
+            </div>
+            <div class="input-container ic2">
+                 <input type="text" name="date_to" placeholder="Date to">
+                <div class="cut"></div>
+            </div>
+            <button type="text" class="button-4">Search</button>
+        </form>
+</div>
 </body>
 </html>
