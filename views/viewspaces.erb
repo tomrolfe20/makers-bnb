@@ -46,11 +46,16 @@
 
 
 <% @space.reverse_each do |space| %>
-    <div class="space"><a href="/viewspace/<%=space.id%>"><p><%= space.name %></p></a>
-    <p><%= space.description %></p>
-    <p><%= space.date_from %></p>
-    <p> <%= space.date_to %></p></div>
-<% end %>
-</div>
+    <div class="space">
+        <div class="space-title">
+            <%= space.name %>
+        </div>
+        <p><span><%= space.description %></span></p>
+        <p><span>From: <%= space.date_from %></span></p>
+        <p>To: <%= space.date_to %></p>
+        <a href="/viewspace/<%=space.id%>">More info</a>
+    </div>
+ <% end %>
+
 </body>
 </html>
