@@ -23,7 +23,7 @@ describe Application do
   context 'GET /' do
     it 'should get the homepage' do
       @response = get('/')
-      expect(@response.body).to include('Hello')
+      expect(@response.body).to include('Feel at home, anywhere')
     end
   end
   context 'GET /login' do
@@ -54,7 +54,7 @@ describe Application do
     it 'should create a new user' do
       length = User.all.length
       @response = post('/signup', user_name: 'hello', email: 'hello@example.email', password: 'hello')
-      expect(User.last.user_name).to include('hello')
+      expect(User.last.user_name).to include("hello")
       expect(length + 1).to eq(User.all.length)
       User.last.destroy
     end
@@ -63,7 +63,7 @@ describe Application do
     it 'should fail and return error' do
       length = User.all.length
       @response = post('/signup', user_name: 'name', email: 'name@example.email', password: 'pass123')
-      expect(@response.body).to include('This Username or email is already in use')
+      expect(@response.body).to include('This user name or email is already in use')
       expect(length).to eq(User.all.length)
     end
   end
@@ -77,7 +77,14 @@ describe Application do
   context 'POST /login with wrong password' do
     it 'should give us an error' do
       @response = post('/login', user_name: 'name', password: 'notpass123')
-      expect(@response.body).to include("You have entered the wrong details")
+      expect(@response.body).to include("The credentials you have entered were incorrect, please try again")
+    end
+  end
+
+  context 'POST /login with an invalid wrong username' do
+    it 'should give us an error' do 
+           @response = post('/login', user_name: 'notname', password: 'pass123')
+      expect(@response.body).to include("The credentials you have entered were incorrect, please try again")
     end
   end
 
