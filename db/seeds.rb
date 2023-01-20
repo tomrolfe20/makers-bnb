@@ -56,4 +56,10 @@ if ENV['RACK_ENV'] == 'test'
     space_id: 3,
     user_id: 3
   )
+else
+  User.create(
+    user_name: "name",
+    email: "name@example.email",
+    password: "pass123"
+  )
 end
