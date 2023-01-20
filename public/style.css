@@ -73,9 +73,15 @@ body {
   color: white;
 }
 
-.nav-bar:nth-child(1) {
+.left-nav {
   font-size: 40px;
   padding: 20px;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  height: 16px;
 }
 
 .index-hero {

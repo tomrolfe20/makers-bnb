@@ -18,5 +18,5 @@ class AddingTables < ActiveRecord::Migration[7.0]
       b.belongs_to :user, foreign_key: true
       b.belongs_to :space, foreign_key: true
     end
-end
+  end
 end
