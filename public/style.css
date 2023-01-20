@@ -28,7 +28,7 @@ body {
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-  text-decoration: none; 
+  text-decoration: none;
   color: black;
 }
 
@@ -74,8 +74,6 @@ body {
   align-items: center;
   color: white;
 }
-
-
 
 .left-nav {
   font-size: 40px;
@@ -200,8 +198,8 @@ body {
 .space {
   width: 300px;
   height: 300px;
-  background-color: black; 
-  color: white; 
+  background-color: black;
+  color: white;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -210,13 +208,12 @@ body {
   margin: 20px;
 }
 
-.space:nth-child(0) {
-  font-size: 100px;
+.space-title {
+  font-size: 30px;
 }
 
 .spaces-container {
-display: flex;
-flex-direction: horizontal;
-width: 100%;
-
+  display: flex;
+  flex-direction: horizontal;
+  width: 100%;
 }

@@ -18,12 +18,12 @@ class Application < Sinatra::Base
   end
   get '/search' do
     return erb(:search)
-  end 
+  end
 
   post '/search' do
     @space = Space.where("spaces.date_from >= ? AND spaces.date_to <= ? AND spaces.available = ?", params[:date_from], params[:date_to], true)
     return erb(:viewspaces)
-  end 
+  end
 
   def username_exists(username)
     User.find_by(user_name: username)
@@ -41,7 +41,7 @@ class Application < Sinatra::Base
   get '/login' do
     return erb(:login)
   end
-  
+
   get '/book' do
     return erb(:book)
   end
@@ -49,18 +49,18 @@ class Application < Sinatra::Base
   get '/signup' do
     return erb(:signup)
   end
-  get '/login' do 
+  get '/login' do
     return erb(:login)
   end
   get '/spaces' do
     return erb(:listspace)
   end
-  get '/viewspaces' do 
+  get '/viewspaces' do
     @space = Space.all
     return erb(:viewspaces)
   end
 
-  get '/viewspace/:id' do 
+  get '/viewspace/:id' do
     repo = Space.all
     @space = repo.find(params[:id])
     return erb(:viewspace)
@@ -101,8 +101,8 @@ class Application < Sinatra::Base
   end 
   post '/spaces' do
     Space.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], date_from: params[:date_from], date_to: params[:date_to], user_id: session[:user_id])
-    return erb(:createdspace)
-  end 
+    return erb(:viewspaces)
+  end
 
   post '/signup' do
     return erb(:signup_error) if username_exists(params[:user_name]) || email_exists(params[:email])
@@ -131,5 +131,8 @@ class Application < Sinatra::Base
     return erb(:logout)
   end
 
-  
+  2012-01-01
+
+  2012-02-03
+
 end
