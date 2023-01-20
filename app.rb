@@ -21,7 +21,7 @@ class Application < Sinatra::Base
   end 
 
   post '/search' do
-    @space = Space.where("spaces.date_from >= ? AND spaces.date_to <= ?", params[:date_from], params[:date_to])
+    @space = Space.where("spaces.date_from >= ? AND spaces.date_to <= ? AND spaces.available = ?", params[:date_from], params[:date_to], true)
     return erb(:viewspaces)
   end 
 
@@ -32,7 +32,7 @@ class Application < Sinatra::Base
   def email_exists(email)
     User.find_by(email: email)
   end
-  
+
   get '/' do
     @user = User.all
     return erb(:index)
@@ -55,8 +55,18 @@ class Application < Sinatra::Base
   get '/viewspaces/:id' do 
     repo = Space.all
     @space = repo.find(params[:id])
-
     return erb(:viewspace)
+  end
+
+  get '/booking' do
+    return erb(:bookings)
+  end
+  
+  post '/booking' do
+    space = Space.find_by(id: params[:space_id])
+    return erb(:booking_error) if !space.available
+    Booking.create(user_id: params[:user_id], space_id: params[:space_id], date: params[:date])
+    return erb(:booking_created)
   end
 
   post '/spaces' do
@@ -80,7 +90,7 @@ class Application < Sinatra::Base
       else 
         return erb(:login_error)
       end 
-    end 
+  end 
   
   post '/logout' do
     session.clear

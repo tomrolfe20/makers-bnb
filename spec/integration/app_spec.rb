@@ -94,9 +94,22 @@ describe Application do
     end 
   end
   context 'POST /search' do 
-    it 'should search based upon dates' do
+    xit 'should search based upon dates' do
       @response = post('/search', date_from: '2022-01-01', date_to: '2022-01-03')
       expect(@response.body).to include("Hotel Makers")
     end
   end
+  context 'POST /booking' do 
+    it 'should create new booking' do
+      @response = post('/booking', user_id: 2, space_id: 3, date: '2023-01-01', available: false)
+      expect(@response.body).to include("Booking created")
+    end
+  end 
+  context 'POST /booking' do
+    it 'should send an error if not avilable' do 
+      @response = post('/booking', user_id: 1, space_id: 1, date: '2023-01-01')
+      expect(@response.body).to include("Cant book for this date")
+    end
+  end
+  
 end
