@@ -28,6 +28,8 @@ body {
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
+  text-decoration: none; 
+  color: black;
 }
 
 .button-4:hover {
@@ -72,6 +74,8 @@ body {
   align-items: center;
   color: white;
 }
+
+
 
 .left-nav {
   font-size: 40px;
@@ -191,4 +195,28 @@ body {
 .logo-link {
   text-decoration: none;
   color: white;
+}
+
+.space {
+  width: 300px;
+  height: 300px;
+  background-color: black; 
+  color: white; 
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.space:nth-child(0) {
+  font-size: 100px;
+}
+
+.spaces-container {
+display: flex;
+flex-direction: horizontal;
+width: 100%;
+
 }

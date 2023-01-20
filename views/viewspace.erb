@@ -1,12 +1,30 @@
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>Spaces</h1>
+<div class="nav-bar">
+         <a class="logo-link" href="/"><div class="left-nav">Maker BnB</div></a>
+        <div class="right-nav">
+            <form action="/logout" method="post"><button type="submit" value="submit" class="button-4">Log out</button></form>
+            <a href="/viewspaces" method="get"><button type="submit" value="submit" class="button-4">View Spaces</a>
+            <a href="/search" method="get"><button type="submit" value="submit" class="button-4">Search Spaces</a>
+         </div>
+
+</div>
+
+<div class="index-hero">Spaces</div>
+
     <h3><%= @space.name %></h3>
     <p><%= @space.description %></p>
     <p><%= @space.date_from %></p>
     <p> <%= @space.date_to %></p><br>
     <a href="/viewspaces" method="get">Go back to see all spaces</a>
+
+<a href="/book" method="get"><button type="submit" value="submit" class="button-4">book</a>
 
 </body>
 </html>

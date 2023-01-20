@@ -42,6 +42,10 @@ class Application < Sinatra::Base
     return erb(:login)
   end
   
+  get '/book' do
+    return erb(:book)
+  end
+
   get '/signup' do
     return erb(:signup)
   end
@@ -56,7 +60,7 @@ class Application < Sinatra::Base
     return erb(:viewspaces)
   end
 
-  get '/viewspaces/:id' do 
+  get '/viewspace/:id' do 
     repo = Space.all
     @space = repo.find(params[:id])
 
@@ -93,4 +97,6 @@ class Application < Sinatra::Base
     session.clear
     return erb(:logout)
   end
+
+  
 end

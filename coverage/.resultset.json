@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/app.rb": {
+      "/Users/james/Desktop/makers-bnb/app.rb": {
         "lines": [
           null,
           1,
@@ -35,7 +35,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
@@ -75,8 +75,8 @@
           null,
           1,
           2,
-          1,
-          1,
+          2,
+          2,
           null,
           null,
           1,
@@ -101,7 +101,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/user.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -111,7 +111,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/space.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/space.rb": {
         "lines": [
           1,
           1,
@@ -119,7 +119,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/booking.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/booking.rb": {
         "lines": [
           1,
           1,
@@ -129,7 +129,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/lib/database_connection.rb": {
+      "/Users/james/Desktop/makers-bnb/lib/database_connection.rb": {
         "lines": [
           null,
           null,
@@ -259,7 +259,7 @@
           null
         ]
       },
-      "/Users/tomrolfe/Desktop/makers/wk5-group-project/maker-bnb/makersbnb/spec/integration/app_spec.rb": {
+      "/Users/james/Desktop/makers-bnb/spec/integration/app_spec.rb": {
         "lines": [
           1,
           1,
@@ -327,7 +327,7 @@
           1,
           1,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -373,6 +373,6 @@
         ]
       }
     },
-    "timestamp": 1674210596
+    "timestamp": 1674211887
   }
 }
