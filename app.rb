@@ -61,7 +61,7 @@ class Application < Sinatra::Base
   get '/booking' do
     return erb(:bookings)
   end
-  
+
   post '/booking' do
     space = Space.find_by(id: params[:space_id])
     return erb(:booking_error) if !space.available
@@ -69,6 +69,28 @@ class Application < Sinatra::Base
     return erb(:booking_created)
   end
 
+  get '/confirm' do
+    return erb(:confirm)
+  end
+
+  post '/confirm' do 
+    booking = Booking.find_by(space_id: params[:space_id])
+    return erb(:confirm_error) if !booking.available
+    Booking.update(user_id: params[:user_id], space_id: params[:space_id], date: params[:date], available: false)
+    return erb(:confirmed)
+  end
+
+  get '/delete_bookings' do
+    return erb(:delete)
+  end
+  post '/delete_bookings' do 
+    Booking.destroy_by(space_id: params[:space_id])
+    if Booking.all.length == 0
+      return erb(:deleted)
+    else Booking.all.length >= 1
+      return erb(:deleted_error)
+    end 
+  end 
   post '/spaces' do
     Space.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], date_from: params[:date_from], date_to: params[:date_to], user_id: session[:user_id])
     return erb(:createdspace)
