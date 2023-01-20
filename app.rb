@@ -37,7 +37,15 @@ class Application < Sinatra::Base
     @user = User.all
     return erb(:index)
   end
+
+  get '/login' do
+    return erb(:login)
+  end
   
+  get '/book' do
+    return erb(:book)
+  end
+
   get '/signup' do
     return erb(:signup)
   end
@@ -52,7 +60,7 @@ class Application < Sinatra::Base
     return erb(:viewspaces)
   end
 
-  get '/viewspaces/:id' do 
+  get '/viewspace/:id' do 
     repo = Space.all
     @space = repo.find(params[:id])
     return erb(:viewspace)
@@ -105,17 +113,23 @@ class Application < Sinatra::Base
   post '/login' do
     username = params[:user_name]
     password = params[:password]
-    user = User.find_by(user_name: username)
-      if user.password == password 
+    if user = User.find_by(user_name: username)
+      if user.password == password
         session[:user_id] = user.id
         return erb(:loggedin)
-      else 
+      else
         return erb(:login_error)
-      end 
-  end 
-  
+      end
+    else
+      return erb(:login_error)
+    end
+  end
+
+
   post '/logout' do
     session.clear
     return erb(:logout)
   end
+
+  
 end

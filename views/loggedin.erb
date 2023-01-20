@@ -1,10 +1,22 @@
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
 <body>
+<div class="nav-bar">
+         <a class="logo-link" href="/"><div class="left-nav">Maker BnB</div></a>
+        <div class="right-nav">
+          <form action="/logout" method="post"><button type="submit" value="submit" class="button-4">Log out</button></form>
+          <a href="/viewspaces" method="get"><button type="submit" value="submit" class="button-4">View Spaces</a>
+          <a href="/search" method="get"><button type="submit" value="submit" class="button-4">Search Spaces</a>
+         </div>
+    </div>
+
 <h1>
-You have logged in
-<form action="/logout" method="post">
-<input type="submit" value="Log out">
+<div class="index-hero">You have logged in</div>
 </form>
 </h1>
 </body>

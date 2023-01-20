@@ -17,6 +17,7 @@ gem "activerecord" # the ORM
 gem "sinatra-activerecord" # so it works with Sinatra
 gem "rake" # to run scripts ??
 gem "bcrypt" # password encryption
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
 group :test do
 
