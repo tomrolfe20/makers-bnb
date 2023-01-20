@@ -1,8 +1,6 @@
-# MakersBnB Project Seed
+# MakersBnB Project by team "Git to da choppah"
 
-This repo contains the seed codebase for the MakersBnB project in Ruby (using Sinatra and RSpec).
-
-Someone in your team should fork this seed repo to their Github account. Everyone in the team should then clone this fork to their local machine to work on it.
+Team members: Shaun Flood, Tom Rolfe, James Paterson, Luiz Santos
 
 ## Setup
 
